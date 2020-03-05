@@ -1,0 +1,37 @@
+
+.display input{
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.keypad button{
+    margin: 5px;
+    width: 20%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    padding: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.keypad button:hover{
+    background: black;
+    transform: scale(1.1);
+    height: 48px;
+    border-bottom: 2px solid white;
+}
+
+@media only screen and (max-width: 600px){
+    .keypad button{
+        margin: 2px;
+        border: none;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!--Fontawsome Links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container bg-danger rounded my-3 text-white text-center">
+        <h1 class="display-4 p-3"><i class="fa fa-calculator" ></i> Basic Calculator</h1>
+        <div class="container bg-dark p-2 rounded">
+            <div class="display">
+                <input type="text" name="display" placeholder="Display" id="display" class="bg-light rounded p-2">
+            </div>
+        </div>
+        <div class="container bg-dark p-1 my-3 rounded">
+            <div class="row bg-light m-2 rounded">
+                <div class="col-md-12">
+                    <div class="keypad bg-dark m-2 rounded">
+                        <!--First Row-->
+                        <button class="text-danger" onclick="clearDisplay()">C</button>
+                        <button onclick="putInDisplay('(')">(</button>
+                        <button onclick="putInDisplay(')')">)</button>
+                        <button onclick="putInDisplay('/')"><i class="fas fa-divide"></i></button>
+                        <br>
+                        <!--Second Row-->
+                        <button onclick="putInDisplay('7')">7</button>
+                        <button onclick="putInDisplay('8')">8</button>
+                        <button onclick="putInDisplay('9')">9</button>
+                        <button onclick="putInDisplay('*')"><i class="fa fa-close"></i></button>
+                        <br>
+                        <!--Third Row-->
+                        <button onclick="putInDisplay('4')">4</button>
+                        <button onclick="putInDisplay('5')">5</button>
+                        <button onclick="putInDisplay('6')">6</button>
+                        <button onclick="putInDisplay('-')"><i class="fa fa-minus"></i></button>
+                        <br>
+                        <!--Fourth Row-->
+                        <button onclick="putInDisplay('1')">1</button>
+                        <button onclick="putInDisplay('2')">2</button>
+                        <button onclick="putInDisplay('3')">3</button>
+                        <button onclick="putInDisplay('+')"><i class="fa fa-plus"></i></button>
+                        <br>
+                        <!--Fifth Row-->
+                        <button onclick="changeType()">+/-</button>
+                        <button onclick="putInDisplay('0')">0</button>
+                        <button onclick="putInDisplay('.')">.</button>
+                        <button onclick="generateResult()" class="text-info"><i class="fas fa-equals"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="display-4 bg-dark rounded p-1">Created by Zahid Shaikh</h1>
+    </div>
+</body>
+<script type="text/javascript"> 
+    
+    //Clears the display.
+    
+    function clearDisplay() 
+    { 
+        document.getElementById("display").value = ""; 
+    } 
+
+    //Calculator Display
+
+    function putInDisplay(char) 
+    {
+        document.getElementById("display").value+=char; 
+    } 
+    
+    //Calculation
+
+    function generateResult() 
+    { 
+        let input = document.getElementById("display").value 
+        let calculation = eval(input)
+        //console.log(calculation);
+        document.getElementById("display").value = calculation; 
+    } 
+     /*
+     *   ((((((((((((((Referred By))))))))))))))
+     *
+     *   Abdul-Aziz(infinity-zee) GitHub Profile:
+     *   GitHub Repository Link:
+     */
+</script>
+</html>
