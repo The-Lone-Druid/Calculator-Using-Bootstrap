@@ -5,6 +5,7 @@
     font-weight: bold;
     border: none;
     outline: none;
+    text-align: right;
 }
 
 .keypad button{
@@ -28,6 +29,7 @@
     height: 48px;
     border-bottom: 2px solid white;
 }
+
 
 @media only screen and (max-width: 600px){
     .keypad button{
